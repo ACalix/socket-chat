@@ -1,0 +1,21 @@
+<div class="chat-container">
+	<div class="message-display">
+		<ul>
+			<li ng-repeat="message in MsgCtrl.currentChat track by $index" ng-class="{self:isNotUser(message.user)}">
+				<strong>{{ message.user }}</strong>: {{message.message}}
+			</li>
+		</ul>
+		<div class="user-list">
+			<h1>Connected Users</h1>
+			<ul>
+				<li ng-repeat="guest in MsgCtrl.connectedGuests track by $index">
+					{{ guest }}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<form novalidate class="message-field">
+		<input type="text" ng-model="MsgCtrl.message" >
+		<button ng-click="sendMessage()">Send</button>
+	</form>
+</div>	

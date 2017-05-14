@@ -1,0 +1,20 @@
+{
+  "name": "chat-app-node",
+  "version": "1.0.0",
+  "description": "Learning to use node by creating a basic chat application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "chat"
+  ],
+  "author": "Allan Calix",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "helmet": "^3.6.0",
+    "socket.io": "^1.7.4"
+  }
+}
