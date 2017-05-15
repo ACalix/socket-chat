@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("chatApp", ["ngRoute"])
+angular.module("chatApp", ["ngRoute", "ngScrollGlue"])
 	.config(function($routeProvider){
 		$routeProvider
 			.when("/", {

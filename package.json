@@ -15,6 +15,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "helmet": "^3.6.0",
+    "ng-scroll-glue": "^2.0.10",
     "socket.io": "^1.7.4"
   }
 }
