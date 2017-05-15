@@ -20,6 +20,11 @@ angular.module("chatApp")
 	          }
 	        });
 	      })
+	    },
+
+	    disconnect: function(){
+	    	socket.disconnect();
+	    	socket.connect({'force new connection': true});
 	    }
 	  };
 	});

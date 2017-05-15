@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
 body {
 	margin: 0px;
+	font-family: Open Sans, "Century Gothic", Century Gothic, Apple Gothic, sans-serif;
+	overflow: hidden;
 }
 
 main {
@@ -17,21 +21,28 @@ main {
 .chat-container input {
 	border: solid 2px grey;
 	border-radius: 15px;
-	width: 90%;
+	width: 85%;
 	height: 15%;
+	min-height: 60px;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	font-size: 18px;
 }
 
 .chat-container button {
 	border: solid 2px grey;
 	border-radius: 25px;
+	min-height: 60px;
+	width: 13%;
 }
 
 .message-display {
 	height: 85%;
 	width: 100%;
 	max-width: inherit;
-	overflow-y: auto;
 	display: flex;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .message-display ul {
@@ -46,13 +57,12 @@ main {
 
 .user-list {
 	width: 15%;
+	left: 77%;
+	position: fixed;
 } 
 
 .user-list h1 {
 	font-size: 18px;
-}
-
-.message-field {
 }
 
 .self strong {

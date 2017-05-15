@@ -20,8 +20,13 @@ io.on("connection", function(client){
 	client.on("join", function(name){
 		client.nickname = name;
 		var users = userList.addGuest(name);
-		client.emit("guest_join", users);
-		client.broadcast.emit("guest_join", users);
+		if (users.idSet){
+			client.emit("guest_join", {isValid: users.idSet, allGuests: users.users});
+			client.broadcast.emit("guest_join", {isValid: users.idSet, allGuests: users.users});
+		} else {
+			client.emit("guest_join", {isValid: users.idSet});
+			client.nickname = "";
+		};
 	});
 
 	client.on("disconnect", function(){
